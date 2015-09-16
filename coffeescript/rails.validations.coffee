@@ -37,7 +37,7 @@ $.fn.isValid = (validators) ->
 validatorsFor = (name, validators) ->
   if captures = name.match /\[(\w+_attributes)\].*\[(\w+)\]$/
     for validator_name, validator of validators
-      if validator_name.match "\\[#{captures[1]}\\].*\\[\\]\\[#{captures[2]}\\]$"
+     # if validator_name.match "\\[#{captures[1]}\\].*\\[\\]\\[#{captures[2]}\\]$"
         name = name.replace(/\[((?:new_)?\d+|[0-9a-f]{24})\]/g, "[]");
   validators[name] || {}
 
